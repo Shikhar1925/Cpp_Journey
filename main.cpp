@@ -13,5 +13,4 @@ int main()
     cout << "\nSize of long Double: " << sizeof(long double) << "-bytes";
     cout << "\nSize of Character: " << sizeof(char) << "-bytes";
     cout << "\nSize of wchar_t: " << sizeof(wchar_t) << "-bytes";
-    cout << "Hello World";
 }
