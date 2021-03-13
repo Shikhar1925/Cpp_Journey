@@ -3,22 +3,22 @@
 using namespace std;
 int main()
 {
-    int pounds, pence, shillings;
+    int pounds, pence, shillings, totalpence;
     cout << "Enter the Pounds: ";
     cin >> pounds;
     cout << "Enter the Shillings: ";
     cin >> shillings;
     cout << "Enter the pence: ";
     cin >> pence;
-    float totalpence;
-    totalpence = (float)((shillings * 12) + pence) / 240;
-    pence = totalpence * 100;
-    cout << totalpence << endl;
-    if (pence >= 100)
+    float totalpound;
+    totalpound = (float)((shillings * 12) + pence) / 240;
+    totalpence = totalpound * 100;
+    cout << totalpound << endl;
+    if (totalpence >= 100)
     {
-        pounds = pounds + (pence / 100);
-        pence = pence % 100;
+        pounds = pounds + (totalpence / 100);
+        totalpence = totalpence % 100;
     }
-    cout << "Decimal Pound: " << pounds << "." << pence;
+    cout << "Decimal Pound: " << pounds << "." << totalpence;
     return 0;
 }
