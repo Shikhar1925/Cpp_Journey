@@ -104,7 +104,7 @@ void bus::showbus()
     {
         design('-');
         cout << "\nBus No.:  " << b1[j].busno << "\t\tDriver Name:  " << b1[j].drivername << endl
-             << "From: " << b1[j].from << "\tTo: " << b1[j].to << "\tDep. Time: " << b1[j].deptime << endl;
+             << "From: " << b1[j].from << "\t\tTo: " << b1[j].to << "\t\t\tDep. Time: " << b1[j].deptime << endl;
         design('-');
         b1[0].location(j);
         int z = 1;
@@ -138,7 +138,7 @@ void bus::empty()
 }
 void bus::location(int m)
 {
-    int s = 0, p = 0;
+    int s = 0, t = 0;
     for (int i = 0; i < 10; i++)
     {
         cout << "\n";
@@ -153,7 +153,7 @@ void bus::location(int m)
                 cout.width(10);
                 cout.fill(' ');
                 cout << b1[m].seat[i][j];
-                p++;
+                t++;
             }
             else
             {
@@ -166,7 +166,7 @@ void bus::location(int m)
             }
         }
     }
-    cout << "\n\nThere are " << p << " seats empty in the Bus No.: " << b1[m].busno;
+    cout << "\n\nThere are " << t << " seats empty in the Bus No.: " << b1[m].busno;
 }
 void bus::busstatus()
 {
@@ -174,7 +174,7 @@ void bus::busstatus()
     {
         design('-');
         cout << "\nBus No.:  " << b1[e].busno << "\t\tDriver Name:  " << b1[e].drivername << endl
-             << "From: " << b1[e].from << "\tTo: " << b1[e].to << "\tDep. Time: " << b1[e].deptime << endl;
+             << "From: " << b1[e].from << "\t\tTo: " << b1[e].to << "\t\tDep. Time: " << b1[e].deptime << endl;
         design('-');
     }
 }
